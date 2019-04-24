@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bowling.edward.shop">
+    package="com.example.c15395091.shop">
 
     <application
         android:allowBackup="true"
@@ -9,13 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddItem"></activity>
-        <activity android:name=".AdminHopePage" />
-        <activity android:name=".AdminRegister" />
-        <activity
-            android:name=".DisplayItems"
-            android:label="@string/title_activity_display_items"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Cart"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Register"
-            android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddItem" />
+        <activity android:name=".AdminHomePage" />
+        <activity android:name=".AdminRegister" />
+        <activity android:name=".DisplayItems" />
         <activity android:name=".HomePage" />
-        <activity android:name=".ItemListAdapter" />
+        <activity android:name=".Register" />
     </application>
 
 </manifest>

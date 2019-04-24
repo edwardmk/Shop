@@ -30,7 +30,7 @@
                 android:id="@+id/stockPicture"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                android:contentDescription="TODO" tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <LinearLayout
                 android:id="@+id/linLayout"
@@ -88,6 +88,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Add to cart" />
+
+                <Button
+                    android:id="@+id/removeCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Remove from cart"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/reviewButton"
