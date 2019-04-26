@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cart"></activity>
+        <activity android:name=".Reviews"></activity>
+        <activity android:name=".Adapter.CartListAdapter" />
+        <activity
+            android:name=".Template.AbstractCardValidation"
+            android:label="@string/title_activity_abstract_card_validation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Cart" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +29,7 @@
         <activity android:name=".DisplayItems" />
         <activity android:name=".HomePage" />
         <activity android:name=".Register" />
+        <activity android:name=".Payment" />
     </application>
 
 </manifest>

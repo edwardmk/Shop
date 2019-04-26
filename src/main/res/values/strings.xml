@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shop</string>
+    <string name="title_activity_abstract_card_validation">AbstractCardValidation</string>
 </resources>

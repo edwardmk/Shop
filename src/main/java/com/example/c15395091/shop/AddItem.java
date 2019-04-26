@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.c15395091.shop.Builder.StockItemBuilder;
+import com.example.c15395091.shop.Constructor.StockItem;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -72,7 +74,6 @@ public class AddItem extends AppCompatActivity {
                         StockItem item = ds.getValue(StockItem.class);
                         if (item.getTitle().equals(iTitle)){
                             Toast.makeText(AddItem.this, "Item already in database.", android.widget.Toast.LENGTH_SHORT).show();
-
                         }
                         else{
                             item = new StockItemBuilder().setTitle(iTitle).setManufacturer(iManufacturer).setPrice(iPrice).setCategory(iCategory).setStock(iStock).createStockItem();
@@ -90,8 +91,6 @@ public class AddItem extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }
-
-
             }
 
             @Override
@@ -103,37 +102,4 @@ public class AddItem extends AppCompatActivity {
 
 
     }
-//    DatabaseReference itemsDb = FirebaseDatabase.getInstance().getReference().child("items");
-//        itemsDb.addValueEventListener(new ValueEventListener() {
-//        @Override
-//        public void onDataChange(DataSnapshot dataSnapshot) {
-//            if(dataSnapshot.getChildren().equals(null)){
-//                StockItem item = ds.getValue(StockItem.class);
-//
-//                item = new StockItemBuilder().setTitle(iTitle).setManufacturer(iManufacturer).setPrice(iPrice).setCategory(iCategory).setStock(iStock).createStockItem();
-//                myRef.child("items").push().setValue(item);
-//                Intent i = new Intent(AddItem.this, HomePage.class);
-//                startActivity(i);
-//                finish();
-//            }
-//            for (DataSnapshot ds : dataSnapshot.getChildren()) {
-//                if (dataSnapshot.exists()) {
-//                    StockItem item = ds.getValue(StockItem.class);
-//
-//                    if (item.getTitle().equals(iTitle)) {
-//                        Toast.makeText(AddItem.this, "Item already in database.", android.widget.Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        item = new StockItemBuilder().setTitle(iTitle).setManufacturer(iManufacturer).setPrice(iPrice).setCategory(iCategory).setStock(iStock).createStockItem();
-//                        myRef.child("items").push().setValue(item);
-//                        Intent i = new Intent(AddItem.this, HomePage.class);
-//                        startActivity(i);
-//                        finish();
-//                    }
-//                }
-//                else {
-//
-//                }
-//            }
-//
-//        }
 }
